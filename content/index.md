@@ -1,27 +1,31 @@
 ---
-title: "Min fina titel"
+title: "Robins sida"
+views:
+    kursrepo:
+        region: sidebar-right
+        template: anax/v2/block/default
+        data:
+            meta:
+                type: single
+                route: block/om-mig
+    byline:
+        region: main
+        template: anax/v2/block/default
+        sort: 2
+        data:
+            meta:
+                type: single
+                route: block/byline
 ---
 Min me-sida i kursen oophp
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
+[FIGURE src="image/me.jpg?width=350&height=300&crop-to-fit&q=100" class="right" caption="Bild ifrån sommarens campingsemester"]
 
-[FIGURE src="image/me.jpg?w=400&a=4,27,11,0&cf&sharpen" class="right" caption="Bild på mig, ätandes glass och hållandes ett kort på någon jultillställning."]
+Jag heter Robin Blixter är född och uppvuxen i Göteborg. Bor i Flatås som ligger i Västra Frölunda, tillsammans med min fru Martina och mina två döttrar, Nova snart 5 år och Luna 1 år.
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+Jag jobbar som stödassistent på ett LSS-boende i Lundby som ligger på Hisingen, och har gjort det i fyra år. Jag har alltid haft ett stort intresse för teknik och data/it, men aldrig jobbat inom det. Jag fick barn relativt tidigt och behövde ett jobb därav hamnade jag på ett LSS-boende, där det finns gott om jobb. Jag började samtidigt plugga vård och omsorgs-programmet på Komvux, den utbildingen pågick i 3 terminer, så fort jag var klar med den fick jag en tillsvidareanställning.
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
+Men jag har länge känt att det inte är det jag vill syssla med för resten av mitt liv. Det är andra året jag söker till högskolan och nu kom jag in på distansutbildningen och tar min chans! Nu är jag tjänstledig för att kunna fokusera på mina studier. Jag har precis lärt klart de två första kurserna: Python och HTMLPHP och jag känner verkligen att jag har valt helt rätt program.
 
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
-
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
-
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching, sedan turfing och nu på sistone verkar släktforskning lite spännande. Annars kan jag alltid koda på något av mina opensource-projekt, det finns och blir över.
-
-Vill du läsa mer om vad jag jobbat med så kan du kika på min [Linkedin-profil](https://www.linkedin.com/in/pt90mr/).
-
-Vi syns och hörs i forum och chatt!
-
-/Mikael
+Mitt stora intresse förutom data/IT är sportfiske - framför allt efter stor gädda! Fiskar främst från flytring, eftersom jag inte har någon plats för en båt. Min största gädda hittils var 103 cm lång och vägde 7,4 kg, längar tills jag kommer över 10 kilogränsen. Jag och min familj brukar åka uppåt i landet på semester tillsammans med ett kompispar som har barn i liknande åldrar, för att campa och självklart fiska. Nu i somras var vi i Vilhelmina, där fick jag nytt personbästa på abborre på 1,1kg, wow vilket fiske det är där och vilken vacker miljö! Norrland är himmelriket för oss sportfiskare!

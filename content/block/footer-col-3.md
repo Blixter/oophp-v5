@@ -1,3 +1,7 @@
-#### Footer col 3
+#### Social
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+På dessa socialnätverk kan ni nå mig.
+
+[<i class="fab fa-facebook fa-3x"></i>](https://www.facebook.com/robin.blixter)
+[<i class="fab fa-instagram fa-3x"></i>](https://www.instagram.com/blixter/)
+[<i class="fab fa-twitter fa-3x"></i>](https://twitter.com/blixter)
