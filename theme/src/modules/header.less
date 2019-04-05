@@ -1,0 +1,110 @@
+/**
+ * Header layout
+ */
+@navbarBackgroundColor: rgb(230, 230, 230);
+@navbarColor: rgb(0, 0, 0);
+@siteLogoColor: #333;
+
+.inner-wrap-header {
+   background: rgb(255, 255, 255);
+}
+
+.rm-max .rm-mobile .rm-submenu-button {
+   background-color: #033050;
+}
+
+.region-header-col-1,
+.region-header-col-2 {
+   #desinax-vgrid.column(7);
+}
+
+.site-logo-text a {
+   font-size: 48px;
+}
+
+// Hide the big logo
+.site-logo {
+   display: none;
+}
+
+// .site-logo-text {
+//    font-size: 45px;
+// }
+
+.site-logo-text a {
+   color: @siteLogoColor;
+   text-decoration: none;
+   font-family: 'Aleo', serif;
+}
+
+// Navbar in region-header-col-2
+
+.region-header-col-2 {
+   font-family: 'Comfortaa', cursive;
+   #desinax-vgrid.column(@columns - 7);
+   // #desinax-vgrid.push(3);
+   display: inline;
+   text-align: center;
+   font-size: 1.5em;
+}
+
+.region-header-col-2 ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   float: right;
+   // overflow: hidden;
+   // background: rgba(49, 49, 49, 0.883);
+}
+
+.region-header-col-2 a {
+   display: block;
+   text-decoration: none;
+   padding-top: 0.1em;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
+.region-header-col-2 li a {
+   // color: inherit;
+   // background-color: @navbarBackgroundColor;
+   display: block;
+   color: @navbarColor;
+   // text-align: center;
+   padding: 14px 16px;
+   // text-decoration: none;
+}
+
+.region-header-col-2 li {
+   display: inline-block;
+   // border-right: 1px solid #bbb;
+}
+
+// Style the dropdown list in the navbar
+.my-navbar li>ul {
+   background-color: @navbarBackgroundColor;
+   color: @navbarColor;
+}
+
+.outer-wrap-header {
+   height: 48px;
+   margin-bottom: @magicNumber;
+}
+
+.rm-desktop li a:hover {
+   text-decoration: underline;
+   text-decoration-color: #c73737;
+}
+
+.rm-max .rm-mobile {
+   background-color: #004576;
+}
+
+.rm-max .rm-small .rm-button.rm-clicked {
+   color: #c73737;
+}
+
+.rm-max .rm-mobile a:hover {
+   text-decoration: underline;
+   text-decoration-color: #c73737
+}

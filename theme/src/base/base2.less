@@ -1,0 +1,38 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import url('https://fonts.googleapis.com/css?family=Aleo|Arimo|Comfortaa');
+
+@bgColorHtml: #004576;
+@bgColorBody: #fff;
+@colorBody: #333;
+@fontFamilyBody: 'Arimo', sans-serif;
+
+html {
+    overflow-y: scroll;
+    background-color: @bgColorHtml;
+}
+
+
+// Activate the grid base font
+body {
+    #desinax-hgrid.font(@fontSizeBody);
+    // line-height: 1.2;
+    color: @colorBody;
+    background-color: @bgColorBody;
+}
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Aleo', serif;
+}
+
+article table tr
+{
+    box-shadow: none;
+}

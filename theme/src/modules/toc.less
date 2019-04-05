@@ -1,0 +1,40 @@
+@tocBorderColor: #e0eaf0;
+@liSelectedBgColor: #3f69aa;
+@liHoverColor: #6a92d1;
+@liColor: white;
+
+.toc {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+// .toc ul {
+//     border: 2px solid @tocBorderColor;
+// }
+
+.toc li {
+    border-bottom: 2px solid @tocBorderColor;
+    padding: 0.6em;
+}
+
+.toc li:last-child {
+    border-bottom: none;
+}
+
+.toc li a {
+    color: inherit;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+// Style the selected page
+li.selected {
+    background-color: @liSelectedBgColor;
+    color: @liColor;
+}
+
+.toc li a:hover {
+   text-decoration: underline;
+   text-decoration-color: #c73737;
+}

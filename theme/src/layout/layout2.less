@@ -1,0 +1,105 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**
+ * General layout
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.row {
+    #desinax-vgrid.row();
+}
+
+/**
+ * Main and sidebars layout
+ */
+
+.inner-wrap {
+   #desinax-vgrid.grid(1100px);
+}
+
+.inner-wrap-header {
+   #desinax-vgrid.grid(1100px);
+}
+
+.vgrid .inner-wrap {
+   @gridImage: "../img/grid_24x30x10-nomargin.png";
+   #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+   &.inner-wrap-header {
+       #desinax-vgrid.showGrid(@gridImage);
+   }
+}
+
+.inner-wrap-main {
+   padding-bottom: @magicNumber;
+}
+
+.region-main {
+   #desinax-vgrid.column(@columns * 3 / 4);
+   #desinax-vgrid.push(3);
+
+    &.has-sidebar {
+       #desinax-vgrid.push(0);
+    }
+    &.has-sidebar-right {
+       #desinax-vgrid.column(@columns * 3 / 4 - 1);
+    }
+    &.has-sidebar-left {
+       #desinax-vgrid.column(@columns * 3 / 4 - 1);
+       #desinax-vgrid.push(1);
+    }
+    &.has-sidebar-left.has-sidebar-right {
+       #desinax-vgrid.column(@columns - 10);
+    }
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+   #desinax-vgrid.column(@columns * 1 / 4);
+}
+
+.region-sidebar-right {
+   #desinax-vgrid.push(1);
+}
+
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+   #desinax-vgrid.column(@columns * 1 / 4 - 1);
+}
+
+.region-main a:link {
+   text-decoration: underline;
+   color: inherit;
+}
+
+.region-main a:visited {
+   color: inherit;
+   text-decoration: underline;
+   text-decoration-color: #004060;
+}
+
+.region-main a:hover {
+   text-decoration: underline;
+   text-decoration-color: #c73737;
+}
+
+.region-main a:active {
+   text-decoration: underline;
+   text-decoration-color: #c73737;
+}
