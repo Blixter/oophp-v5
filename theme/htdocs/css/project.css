@@ -4914,6 +4914,9 @@ h4 {
 article table tr {
   box-shadow: none;
 }
+.inner-wrap-main {
+  min-height: 600px;
+}
 /**
  * Import the vertical grid.
  */
@@ -5257,6 +5260,35 @@ h4 {
 }
 a.header-anchor {
   display: none;
+}
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aligner-item {
+  max-width: 50%;
+}
+.game.header {
+  text-align: center;
+}
+.game.number {
+  padding: 5px;
+  border: 2px solid #a3bda6;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.game.submit {
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  background: #a3bda6;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
 }
 /**
  * Figure and figcaption for images and other media using figure/figcaption
