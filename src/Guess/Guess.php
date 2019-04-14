@@ -51,7 +51,7 @@ class Guess
     /**
      * Get number of tries left.
      *
-     * @return int as number of tries made.
+     * @return int as number of tries left.
      */
     public function tries() : int
     {
