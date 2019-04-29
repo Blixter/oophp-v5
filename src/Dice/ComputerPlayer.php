@@ -4,25 +4,42 @@ namespace Blixter\Dice;
 class ComputerPlayer extends Player
 {
     /**
-     * Inherit from Player.
-     */
-    public function __construct(int $dies = 5)
-    {
-        parent::__construct($dies);
-    }
-
-    /**
-     * Random choice if to save or continue
+     * If computer rolled atleast one six, save.
      * @return str save or continue
      */
     public function makeDecision()
     {
-        $choice = rand(1, 2);
-        if ($choice == 1) {
+        $rolls = $this->dices->getHistogramSerie();
+        $roundPoints = array_sum($rolls);
+        $currentScore = $this->getScore();
+        $serieAmount = sizeof($rolls);
+        $highDices = 0;
+
+        // If the computer has more than 50 points on the 
+        // current round save the points.
+        if ($roundPoints > 50) {
             return "save";
         }
-        if ($choice == 2) {
-            return "continue";
+
+        // If the points for the current roll serie is enough 
+        // to win the game, return 'save'.
+        if ($roundPoints + $currentScore >= 100) {
+            return "save";
         }
+
+        // Check how many dices has the value 5 or 6.
+        foreach ($rolls as $roll) {
+            if ($roll == 5 || $roll == 6) {
+                $highDices++;
+            } 
+        }
+
+        // If more than half of the rolled dices
+        // is high value dices return 'save'.
+        if ($highDices > ($serieAmount/2)) {
+            return "save";
+        }
+
+        return "continue";
     }
 }

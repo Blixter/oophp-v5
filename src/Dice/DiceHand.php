@@ -50,7 +50,7 @@ class DiceHand
         $length = count($this->dices);
         for ($i = 0; $i < $length; $i++) {
             $this->dices[$i]->roll();
-            $this->values[$i] = $this->dices[$i]->roll();
+            $this->values[$i] = $this->dices[$i]->getLastRoll();
         }
     }
 

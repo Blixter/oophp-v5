@@ -39,7 +39,7 @@ class GameHandler
     public function playerTurn()
     {
         $this->started = true;
-        $this->computer->dices = new DiceHand($this->numberOfDices);
+        $this->computer->dices = new DiceHandHistogram($this->numberOfDices);
         $this->player->rollDices();
         // if the player rolled one, change the turn to computer and return
         if ($this->player->checkIfRolledOne() == true) {
@@ -78,7 +78,7 @@ class GameHandler
      */
     public function computerTurn()
     {
-        $this->player->dices = new DiceHand($this->numberOfDices);
+        $this->player->dices = new DiceHandHistogram($this->numberOfDices);
         $this->computer->rollDices();
         // if the computer rolled one, change the turn to player and return
         if ($this->computer->checkIfRolledOne() == true) {

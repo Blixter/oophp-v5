@@ -12,6 +12,7 @@ class Dice
      */
     // private $dice;
     private $lastRoll;
+    // public $value;
 
     /**
      * Constructor to create a Dice.
@@ -20,7 +21,7 @@ class Dice
     public function __construct(int $sides = 6)
     {
         $this->sides = $sides;
-        $this->roll();
+        // $this->roll();
     }
 
     /**
@@ -32,6 +33,7 @@ class Dice
     {
         $rolled = rand(1, $this->sides);
         $this->lastRoll = $rolled;
+        // $this->value = $rolled;
         return $rolled;
     }
 

@@ -21,7 +21,7 @@ class Player
     public function __construct(int $dies = 5)
     {
         $this->score = 0;
-        $this->dices = new DiceHand($dies);
+        $this->dices = new DiceHandHistogram($dies);
     }
 
     /**
