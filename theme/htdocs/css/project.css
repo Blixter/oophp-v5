@@ -5091,8 +5091,7 @@ pre {
   font-family: monospace;
   white-space: pre;
   color: #222222;
-  border: 1px solid #ccc;
-  background: #eee;
+  background: white;
   border-radius: 5px;
 }
 /**
@@ -5297,6 +5296,41 @@ a.header-anchor {
   border-radius: 5px;
   width: 100%;
   margin-bottom: 10px;
+}
+/**
+ * CSS sprite for a dice with six faces.
+ */
+.dice-sprite {
+  display: inline-block;
+  padding: 0;
+  margin: 0 4px 0 0;
+  width: 32px;
+  height: 32px;
+  background: url("../image/dice-faces.jpg") no-repeat;
+}
+.dice-sprite.dice-1 {
+  background-position: -160px 0;
+}
+.dice-sprite.dice-2 {
+  background-position: -128px 0;
+}
+.dice-sprite.dice-3 {
+  background-position: -96px 0;
+}
+.dice-sprite.dice-4 {
+  background-position: -64px 0;
+}
+.dice-sprite.dice-5 {
+  background-position: -32px 0;
+}
+.dice-sprite.dice-6 {
+  background-position: 0 0;
+}
+.red {
+  color: #aa2525;
+}
+.green {
+  color: #369536;
 }
 /**
  * Figure and figcaption for images and other media using figure/figcaption
@@ -5732,38 +5766,3 @@ img {
 /**
  * My own settings, not currently in their own module.
  */
-/**
- * CSS sprite for a dice with six faces.
- */
-.dice-sprite {
-  display: inline-block;
-  padding: 0;
-  margin: 0 4px 0 0;
-  width: 32px;
-  height: 32px;
-  background: url("../image/dice-faces.jpg") no-repeat;
-}
-.dice-sprite.dice-1 {
-  background-position: -160px 0;
-}
-.dice-sprite.dice-2 {
-  background-position: -128px 0;
-}
-.dice-sprite.dice-3 {
-  background-position: -96px 0;
-}
-.dice-sprite.dice-4 {
-  background-position: -64px 0;
-}
-.dice-sprite.dice-5 {
-  background-position: -32px 0;
-}
-.dice-sprite.dice-6 {
-  background-position: 0 0;
-}
-.red {
-  color: #aa2525;
-}
-.green {
-  color: #369536;
-}
