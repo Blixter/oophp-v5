@@ -15,3 +15,4 @@ $choice = $app->session->get("choice") ?? "nothing";
 $app->session->set("choice", null);
 $started = $game->started;
 $choosedDices = $app->session->get("choosedDices");
+$histogram =  $app->session->get("histogram", null);

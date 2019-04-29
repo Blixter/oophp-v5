@@ -3,9 +3,9 @@
 namespace Anax\View;
 
 include "variables.php";
+?>
 
-
-?><h1>Dice 100</h1>
+<h1>Dice 100</h1>
 <hr>
 <p>Players Total Score: <b><?= $playerScore ?></b></p>
 <p>Computers Total Score: <b><?= $computerScore ?></b>
@@ -15,6 +15,9 @@ include "variables.php";
 <p class="red"><b>The computer won the game!</b></p>
 <?php endif; ?>
 <hr>
+<?php if (isset($histogram)) : echo("<pre><b>Histogram</b><br>" . 
+    $histogram->getAsText() . "</pre>"); ?>
+<?php endif; ?>
 <p>Score this round: <b><?= $roundScore ?></b></p>
 <p>Current turn: <b><?= ucwords($roundTurn) ?></b></p>
 <hr>
@@ -33,9 +36,8 @@ include "variables.php";
     <?php endif; ?>
 <?php endif; ?>
 <?php if (($choice == "save")) : ?>
-    <p>Computer choose to save points.</p>
+    <p><b>Computer choose to save points.</b></p>
 <?php endif; ?>
-
 
 
 <form method="POST" action="./player">
