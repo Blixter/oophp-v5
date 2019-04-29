@@ -81,7 +81,7 @@ return [
         ],
         [
             "text" => "Dice100",
-            "url" => "dice100",
+            "url" => "dice",
             "title" => "Spela tärningsspel 100",
         ],
     ],
