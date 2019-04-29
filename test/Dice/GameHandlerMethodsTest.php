@@ -78,4 +78,117 @@ class GameHandlerMethodsTest extends TestCase
 
         $this->assertEquals($exp, $res);
     }
+
+    /**
+     * Construct object and verify that the method 'playerTurn'
+     * returns the last roll.
+     */
+    public function testPlayerTurn()
+    {
+        $game = new gameHandler();
+
+        for ($i = 0; $i <= 100; $i++) {
+            $res = $game->playerTurn();
+            if ($game->player->checkIfRolledOne()) {
+                $exp = $game->player->getLastRoll();
+                $this->assertEquals($exp, $res);
+            } else {
+                $res = $game->playerTurn();
+                $exp = $game->player->getLastRoll();
+                $this->assertEquals($exp, $res);
+            }
+        }
+    }
+
+    /**
+     * Construct object and verify that the method 'computerTurn'
+     * returns the last roll.
+     */
+    public function testComputerTurn()
+    {
+        $game = new gameHandler();
+
+        for ($i = 0; $i <= 100; $i++) {
+            $res = $game->computerTurn();
+            if ($game->computer->checkIfRolledOne()) {
+                $exp = $game->computer->getLastRoll();
+                $this->assertEquals($exp, $res);
+            } else {
+                $res = $game->computerTurn();
+                $exp = $game->computer->getLastRoll();
+                $this->assertEquals($exp, $res);
+            }
+        }
+    }
+
+    /**
+     * Construct object and verify that the method 'playerSaveScore'
+     * changes the property 'currentRoundScore' correctly.
+     */
+    public function testPlayerSaveScore()
+    {
+        $game = new gameHandler();
+
+        $exp = 20;
+        // Adding value to roundscore
+        $game->addRoundScore($exp);
+
+        // Should reset back to 0.
+        $game->playerSaveScore();
+
+        $res = $game->player->getScore();
+
+        $this->assertEquals($exp, $res);
+    }
+
+    /**
+     * Construct object and verify that the method 'computerSaveScore'
+     * changes the property 'currentRoundScore' correctly.
+     */
+    public function testComputerSaveScore()
+    {
+        $game = new gameHandler();
+
+        $exp = 20;
+        // Adding value to roundscore
+        $game->addRoundScore($exp);
+
+        // Should reset back to 0.
+        $game->computerSaveScore();
+
+        $res = $game->computer->getScore();
+
+        $this->assertEquals($exp, $res);
+    }
+
+    /**
+     * Construct object and verify that the method 'getRoundTurn'
+     * returns the correct player.
+     */
+    public function testGetRoundTurn()
+    {
+        $game = new gameHandler();
+        
+        // Player always starts.
+        $exp = "player";
+
+        $res = $game->getRoundTurn();
+
+        $this->assertEquals($exp, $res);
+    }
+
+    /**
+     * Construct object and verify that the method 'saveOrContinue'
+     * returns a string correctly.
+     */
+    public function testSaveOrContinue()
+    {
+        $game = new gameHandler();
+
+        for ($i = 0; $i <= 100; $i++) {
+            $game->computer->dices->roll();
+            $resArray[] = $game->saveOrContinue();
+        }
+        $this->assertContains("save", $resArray);
+    }
 }
