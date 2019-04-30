@@ -23,8 +23,6 @@ class ComputerPlayerCreateObjectTest extends TestCase
         $this->assertEquals($exp, $res);
     }
 
-
-
     /**
      * Construct object and verify that the object has the expected
      * properties. Use one argument.

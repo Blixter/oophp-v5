@@ -10,8 +10,8 @@ use PHPUnit\Framework\TestCase;
 class DiceHandHistogramCreateObjectTest extends TestCase
 {
     /**
-     * Construct object and verify that the object has the expected
-     * properties. Use no arguments.
+     * Construct object and verify that the method 'getHistogramMax' 
+     * work as expected.
      */
     public function testGetHistogramMax()
     {
@@ -26,8 +26,8 @@ class DiceHandHistogramCreateObjectTest extends TestCase
 
 
     /**
-     * Construct object and verify that the object has the expected
-     * properties. Use one argument.
+     * Construct object and verify that the method 'roll' 
+     * work as expected.
      */
     public function testRoll()
     {
@@ -43,8 +43,8 @@ class DiceHandHistogramCreateObjectTest extends TestCase
     }
 
     /**
-     * Construct object and verify that the object has the expected
-     * properties. Use one argument.
+     * Construct object and verify that the method 'histogramMin' 
+     * work as expected.
      */
     public function testHistogramMin()
     {
@@ -56,8 +56,8 @@ class DiceHandHistogramCreateObjectTest extends TestCase
     }
 
     /**
-     * Construct object and verify that the object has the expected
-     * properties. Use one argument.
+     * Construct object and verify that the method 'histogramMax' 
+     * work as expected.
      */
     public function testHistogramMax()
     {

@@ -10,8 +10,8 @@ use PHPUnit\Framework\TestCase;
 class PlayerMethodsTest extends TestCase
 {
     /**
-     * Construct object and verify that the object has the expected
-     * properties. Use no arguments.
+     * Construct object and verify that the method 'addScore' 
+     * work as expected.
      */
     public function testAddScore()
     {
@@ -25,8 +25,8 @@ class PlayerMethodsTest extends TestCase
     }
 
     /**
-     * Construct object and verify that the object has the expected
-     * properties. Use no arguments.
+     * Construct object and verify that the method 'rollDices' 
+     * work as expected.
      */
     public function testRollDices()
     {
@@ -39,8 +39,8 @@ class PlayerMethodsTest extends TestCase
     }
 
     /**
-     * Construct object and verify that the object has the expected
-     * properties. Use no arguments.
+     * Construct object and verify that the method 'getLastRoll' 
+     * work as expected.
      */
     public function testGetLastRoll()
     {
@@ -51,9 +51,10 @@ class PlayerMethodsTest extends TestCase
         $res = sizeof($player->getLastRoll());
         $this->assertEquals($exp, $res);
     }
-        /**
-     * Construct object and verify that the object has the expected
-     * properties. Use no arguments.
+
+    /**
+     * Construct object and verify that the method 'checkIfRolledOne' 
+     * work as expected.
      */
     public function testCheckIfRolledOne()
     {
