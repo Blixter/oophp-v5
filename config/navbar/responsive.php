@@ -84,5 +84,10 @@ return [
             "url" => "dice",
             "title" => "Spela tärningsspel 100",
         ],
+        [
+            "text" => "Movie",
+            "url" => "movie/show",
+            "title" => "My Movie Database",
+        ],
     ],
 ];
