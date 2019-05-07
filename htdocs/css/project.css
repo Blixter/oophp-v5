@@ -5333,6 +5333,22 @@ a.header-anchor {
   color: #369536;
 }
 /**
+ * Movie database table
+ */
+table {
+  margin: 0 auto;
+  padding: 0.5em;
+  border-collapse: collapse;
+}
+tr.first {
+  height: 2em;
+  background-color: #dddddd;
+}
+th,
+td {
+  padding: 0.8em;
+}
+/**
  * Figure and figcaption for images and other media using figure/figcaption
  */
 /**
