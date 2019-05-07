@@ -7,3 +7,5 @@ composer.lock
 doc/
 
 .vscode/
+
+config/database.php
