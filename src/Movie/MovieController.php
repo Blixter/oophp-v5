@@ -221,16 +221,16 @@ class MovieController implements AppInjectableInterface
     public function resetAction() : object
     {
         $request = $this->app->request;
-        $response = $this->app->response;
+        $dbConfig = $this->app->configuration->load("database");
+
+        if ($request->getPost('reset')) {
+            $output = $this->movie->resetDatabase($dbConfig);
+        }
 
         $data = [
             "title" => "Återställ databasen",
+            "output" => $output ?? null
         ];
-
-        if ($request->getPost('reset')) {
-            $this->movie->resetDatabase();
-            $response->redirect("movie/show");
-        }
 
         $this->app->page->add('movie/header', $data);
         $this->app->page->add('movie/reset', $data);

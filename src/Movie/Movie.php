@@ -157,25 +157,59 @@ class Movie
         return $res;
     }
 
-
     /**
      * Reset database
      *
      * @return void
      */
-    public function resetDatabase()
+    public function resetDatabase($database)
     {
-    // Restore the database to its original settings
-        $this->db->connect();
-        $sql1 = "DELETE FROM `movie`;";
-        $sql2 = "INSERT INTO `movie` (`title`, `year`, `image`) VALUES
-            ('Pulp fiction', 1994, 'pulp-fiction.jpg'),
-            ('American Pie', 1999, 'american-pie.jpg'),
-            ('Pokémon The Movie 2000', 1999, 'pokemon.jpg'),  
-            ('Kopps', 2003, 'kopps.jpg'),
-            ('From Dusk Till Dawn', 1996, 'from-dusk-till-dawn.jpg')
-        ;";
-        $this->db->execute($sql1);
-        $this->db->execute($sql2);
+        // Restore the database to its original settings
+
+        $dbConfig = $database["config"];
+
+        $file   = "../sql/movie/setup.sql";
+        $mysql  = "/usr/bin/mysql";
+
+        // Extract hostname and databasename from dsn
+        $dsnDetail = [];
+        preg_match("/mysql:host=(.+);dbname=([^;.]+)/", $dbConfig["dsn"], $dsnDetail);
+        $host = $dsnDetail[1];
+        $database = $dsnDetail[2];
+        $username = $dbConfig["username"];
+        $password = $dbConfig["password"];
+
+        $command = "$mysql -h{$host} -u{$username} -p{$password} $database < $file 2>&1";
+        $output = [];
+        $status = null;
+        exec($command, $output, $status);
+        $output = "The command exit status was $status."
+            . "<br>The output from the command was:</p><pre>"
+            . print_r($output, 1);
+
+        return $output;
     }
+
+
+
+    // /**
+    //  * Reset database
+    //  *
+    //  * @return void
+    //  */
+    // public function resetDatabase2()
+    // {
+    // // Restore the database to its original settings
+    //     $this->db->connect();
+    //     $sql1 = "DELETE FROM `movie`;";
+    //     $sql2 = "INSERT INTO `movie` (`title`, `year`, `image`) VALUES
+    //         ('Pulp fiction', 1994, 'pulp-fiction.jpg'),
+    //         ('American Pie', 1999, 'american-pie.jpg'),
+    //         ('Pokémon The Movie 2000', 1999, 'pokemon.jpg'),  
+    //         ('Kopps', 2003, 'kopps.jpg'),
+    //         ('From Dusk Till Dawn', 1996, 'from-dusk-till-dawn.jpg')
+    //     ;";
+    //     $this->db->execute($sql1);
+    //     $this->db->execute($sql2);
+    // }
 }
