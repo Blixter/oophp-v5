@@ -45,6 +45,11 @@ return [
                         "url" => "redovisning/kmom05",
                         "title" => "Redovisning för kmom05.",
                     ],
+                    [
+                        "text" => "Kmom06",
+                        "url" => "redovisning/kmom06",
+                        "title" => "Redovisning för kmom06.",
+                    ],
                 ],
             ],
         ],
@@ -74,19 +79,38 @@ return [
             "title" => "Anax development utilities",
         ],
         [
-            "text" => "Guess game",
-            "url" => "guess-game",
-            "title" => "Spela gissa mitt nummer",
-        ],
-        [
-            "text" => "Dice",
-            "url" => "dice",
-            "title" => "Spela tärningsspel 100",
-        ],
-        [
-            "text" => "Movie",
-            "url" => "movie/show",
-            "title" => "My Movie Database",
+            "text" => "Uppgifter",
+            "url" => "uppgifter",
+            "title" => "Uppgifter från kursmomenten.",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Guess game",
+                        "url" => "guess-game",
+                        "title" => "Spela gissa mit nummer",
+                    ],
+                    [
+                        "text" => "Dice 100",
+                        "url" => "dice",
+                        "title" => "Spela tärningsspelet 100",
+                    ],
+                    [
+                        "text" => "Movie",
+                        "url" => "movie/show",
+                        "title" => "My Movie Database",
+                    ],
+                    [
+                        "text" => "Filter",
+                        "url" => "textfilter",
+                        "title" => "Mitt textfilter",
+                    ],
+                    [
+                        "text" => "Content",
+                        "url" => "content",
+                        "title" => "Blogg",
+                    ],
+                ],
+            ],
         ],
     ],
 ];
