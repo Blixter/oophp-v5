@@ -5782,3 +5782,9 @@ img {
 /**
  * My own settings, not currently in their own module.
  */
+pre {
+  white-space: pre-wrap;
+}
+.route-content-admin .region-main a:link {
+  text-decoration: none;
+}
